@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anschreiben und Lebenslauf Kyle Henselamann</title>
+</head>
+<body>
+<style>
+  #time{
+    text-align: center;
+    font-size: 120px;
+  }
+</style>
+<script language="javascript" type="text/javascript">
+  function startTimer(duration, display) {
+    var timer = duration,seconds;
+    setInterval(function () {
+      seconds = parseInt(timer % 3, 10);
+      seconds = seconds < 10 ?  seconds : seconds;
+
+      display.textContent = "Weiterleitung in: "+seconds;
+
+      if (--timer < 0) {
+        timer = duration;
+      }
+    }, 1000);
+    if(seconds!=0){
+      window.setTimeout('window.location = "http://khenselmann.de/bwi/"',2000);
+    }
+  }
+
+  window.onload = function () {
+    var fiveMinutes = 60 * 5,
+            display = document.querySelector('#time');
+    startTimer(fiveMinutes, display);
+  };
+//window.setTimeout('window.location = "http://khenselmann.de/afi/"',2000);
+  // –>
+</script>
+Sie sollten eigentliche weitergeleitet werden. Ist Javascript auf ihrem Geräte deaktiviert folgen sie bitte <a href="http://khenselmann.de/bwi/">Link</a>
+<div id="time"></div>
+</body>
+</html>
